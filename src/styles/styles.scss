@@ -1,0 +1,22 @@
+@import "~bootstrap/scss/bootstrap";
+
+/* Application styles */
+header {
+    height: 15vh;
+}
+
+footer {
+    height: 10vh;
+}
+
+.page {
+    height: 100vh;
+}
+
+.page--session {
+    height: 75vh;
+}
+
+.page__logo {
+    width: 200px;
+}
