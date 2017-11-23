@@ -93,7 +93,7 @@ class LoginForm extends Component {
                 <button 
                     type="submit"
                     className="btn btn-secondary"
-                    disabled={this.props.validating}
+                    disabled={this.state.validating}
                 >
                     Login
                 </button>

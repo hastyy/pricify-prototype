@@ -15,7 +15,7 @@ export default class FormsContainer extends Component {
     render() {
         return (
             <div>
-                <ul className="nav nav-tabs mb-2">
+                <ul className="nav nav-tabs mb-2 justify-content-center">
                     <li className="nav-item">
                         <a 
                             href="#"

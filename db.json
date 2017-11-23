@@ -1,8 +1,19 @@
 {
-    "users": [
-        {
-            "username": "hastyy",
-            "password": "asd"
-        }
-    ]
+  "users": [
+    {
+      "username": "teste",
+      "password": "qwe",
+      "id": 1
+    },
+    {
+      "username": "teste2",
+      "password": "qwe",
+      "id": 2
+    },
+    {
+      "username": "hastyy",
+      "password": "asd",
+      "id": 3
+    }
+  ]
 }

@@ -11,9 +11,22 @@ class LandingPage extends Component {
         showLogin: true
     };
 
+    redirectOnSession = () => {
+        if (this.props.user)
+            this.props.history.push("/search");
+    };
+
     setView = (showLogin) => {
         this.setState(() => ({ showLogin }));
     };
+
+    componentWillMount() {
+        this.redirectOnSession();
+    }
+
+    componentDidUpdate() {
+        this.redirectOnSession();
+    }
 
     render() {
         return (
