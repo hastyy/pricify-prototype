@@ -15,5 +15,14 @@
       "password": "asd",
       "id": 3
     }
+  ],
+  "products": [
+    {
+      "name": "Leite Mimosa Meio Gordo",
+      "price": 87,
+      "stores": ["Continente", "Jumbo"],
+      "keywords": ["leite", "milk", "mimosa"],
+      "id": 1
+    }
   ]
 }
