@@ -3,7 +3,8 @@ import {
     CREATE_LIST,
     ADD_ITEM_TO_LIST,
     REMOVE_ITEM_FROM_LIST,
-    SET_LIST_UNACTIVE
+    SET_LIST_UNACTIVE,
+    SET_LIST_ACTIVE
 } from '../actions/shoppingLists';
 
 
@@ -21,6 +22,7 @@ export default (state = [], action) => {
         case ADD_ITEM_TO_LIST:
         case REMOVE_ITEM_FROM_LIST:
         case SET_LIST_UNACTIVE:
+        case SET_LIST_ACTIVE:
             const i = state.findIndex(l => l.id == action.shoppingList.id);
             return [
                 ...state.slice(0, i),

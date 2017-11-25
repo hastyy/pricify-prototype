@@ -117,12 +117,14 @@ const TableRow = ({ product, editProduct, removeProduct }) => (
             {product.store.price / 100}€
         </td>
         <td className="align-middle text-center">
-            <a className="action-icon" href="#" onClick={editProduct}>
-                <i className="ion-edit" />
-            </a>
-            <a className="action-icon" href="#" onClick={removeProduct}>
-                <i className="ion-close-round" />
-            </a>
+            <div className="d-flex w-100 justify-content-between p-1">
+                <a className="action-icon" href="#" onClick={editProduct}>
+                    <i className="ion-edit" />
+                </a>
+                <a className="action-icon" href="#" onClick={removeProduct}>
+                    <i className="ion-close-round" />
+                </a>
+            </div>
         </td>
     </tr>
 );

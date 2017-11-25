@@ -9,6 +9,7 @@ export const CREATE_LIST = 'CREATE_LIST';
 export const ADD_ITEM_TO_LIST = 'ADD_ITEM_TO_LIST';
 export const REMOVE_ITEM_FROM_LIST = 'REMOVE_ITEM_FROM_LIST';
 export const SET_LIST_UNACTIVE = 'SET_LIST_UNACTIVE';
+export const SET_LIST_ACTIVE = 'SET_LIST_ACTIVE';
 
 export const getUserShoppingLists = (userId) => (dispatch) => {
     axios.get(`${BASE_URL}/shoppingLists?user=${userId}`)
@@ -20,6 +21,35 @@ export const getUserShoppingLists = (userId) => (dispatch) => {
                 shoppingLists
             });
         });
+};
+
+export const setListActive = (list, activeShoppingList) => (dispatch) => {
+    if (list === activeShoppingList) return;
+
+    axios.put(`${BASE_URL}/shoppingLists/${list.id}`, {
+        ...list,
+        active: true
+    }).then(res => {
+        const shoppingList = res.data;
+        
+        dispatch({
+            type: SET_LIST_ACTIVE,
+            shoppingList
+        });
+
+        // Unset the previous active shopping list
+        return axios.put(`${BASE_URL}/shoppingLists/${activeShoppingList.id}`, {
+            ...activeShoppingList,
+            active: false
+        });
+    }).then(res => {
+        const shoppingList = res.data;
+        
+        dispatch({
+            type: SET_LIST_UNACTIVE,
+            shoppingList
+        });
+    });
 };
 
 export const createShoppingList = (userId, activeShoppingList) => (dispatch) => {

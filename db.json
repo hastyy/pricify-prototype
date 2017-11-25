@@ -246,7 +246,7 @@
     },
     {
       "user": 2,
-      "active": false,
+      "active": true,
       "date": 1511631128761,
       "products": [
         {
@@ -270,10 +270,35 @@
     },
     {
       "user": 2,
-      "active": true,
+      "active": false,
       "date": 1511631265901,
-      "products": [],
+      "products": [
+        {
+          "name": "Cereais Nestlé Cheerios",
+          "keywords": [
+            "cereais",
+            "cereals",
+            "nestlé",
+            "cheerios"
+          ],
+          "img": "/img/cereais_nestle_cheerios.jpg",
+          "id": 8,
+          "store": {
+            "name": "Minipreço",
+            "img": "/img/minipreco.png",
+            "id": 4,
+            "price": 309
+          }
+        }
+      ],
       "id": 3
+    },
+    {
+      "user": 2,
+      "active": false,
+      "date": 1511633922771,
+      "products": [],
+      "id": 4
     }
   ],
   "stores": [
