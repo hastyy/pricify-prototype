@@ -15,9 +15,9 @@ class ResultsTable extends Component {
             <table className="table table-bordered">
                 <thead className="mb-2">
                     <tr>
-                        <th>{this.props.products.length} Results Found</th>
-                        <th>Available in</th>
-                        <th>Price</th>
+                        <th className="align-middle text-center">{this.props.products.length} Results Found</th>
+                        <th className="align-middle text-center">Available in</th>
+                        <th className="align-middle text-center">Price</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -76,12 +76,12 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ResultsTa
 
 // TableRow
 const TableRow = ({ product, storeCount, bestPrice, onClick }) => (
-    <tr onClick={onClick}>
-        <td>
+    <tr className="results-tr" onClick={onClick}>
+        <td className="align-middle">
             <img className="table-img" src={product.img} />
             <span className="h3 font-weight-normal">{product.name}</span>
         </td>
-        <td>{storeCount} Stores</td>
-        <td>{bestPrice / 100}€</td>
+        <td className="align-middle text-center">{storeCount} Stores</td>
+        <td className="align-middle text-center">{bestPrice / 100}€</td>
     </tr>
 );

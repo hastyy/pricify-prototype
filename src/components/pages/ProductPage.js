@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import SupermarketTable from '../SupermarketTable';
+
 
 export default class ProductPage extends Component {
     render() {
@@ -7,7 +9,7 @@ export default class ProductPage extends Component {
             <div className="page--session container">
                 <div className="row">
                     <div className="col-md-10 offset-md-1">
-                        Product Page - Must show stores
+                        <SupermarketTable />
                     </div>
                 </div>
             </div>
