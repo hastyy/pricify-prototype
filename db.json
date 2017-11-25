@@ -14,15 +14,289 @@
       "username": "hastyy",
       "password": "asd",
       "id": 3
+    },
+    {
+      "username": "Pedro",
+      "password": "we123",
+      "id": 4
     }
   ],
   "products": [
     {
       "name": "Leite Mimosa Meio Gordo",
-      "price": 87,
-      "stores": ["Continente", "Jumbo"],
       "keywords": ["leite", "milk", "mimosa"],
+      "img": "/img/leite_mimosa.jpg",
       "id": 1
+    },
+    {
+      "name": "Leite Parmalat Meio Gordo",
+      "keywords": ["leite", "milk", "parmalat"],
+      "img": "/img/leite_parmalat.jpg",
+      "id": 2
+    },
+    {
+      "name": "Leite Gresso Meio Gordo",
+      "keywords": ["leite", "milk", "gresso"],
+      "img": "/img/leite_gresso.jpg",
+      "id": 3
+    },
+    {
+      "name": "Leite Nova Açores Meio Gordo",
+      "keywords": ["leite", "milk", "nova", "açores"],
+      "img": "/img/leite_nova_acores.jpg",
+      "id": 4
+    },
+    {
+      "name": "Cereais Nestlé Chocapic",
+      "keywords": ["cereais", "cereals", "nestlé", "chocapic"],
+      "img": "/img/cereais_chocapic.jpg",
+      "id": 5
+    },
+    {
+      "name": "Cereais Nestlé Cini Minis",
+      "keywords": ["cereais", "cereals", "nestlé", "cini", "minis"],
+      "img": "/img/cereais_nestle_cini_minis.jpg",
+      "id": 6
+    },
+    {
+      "name": "Cereais Nestlé Golden Grahams",
+      "keywords": ["cereais", "cereals", "nestlé", "golden", "grahams"],
+      "img": "/img/cereais_nestle_golden_grahams.jpg",
+      "id": 7
+    },
+    {
+      "name": "Cereais Nestlé Cheerios",
+      "keywords": ["cereais", "cereals", "nestlé", "cheerios"],
+      "img": "/img/cereais_nestle_cheerios.jpg",
+      "id": 8
+    },
+    {
+      "name": "Abacate",
+      "keywords": ["abacate", "avocado"],
+      "img": "/img/abacate.jpg",
+      "id": 9
+    },
+    {
+      "name": "Abacate Hass",
+      "keywords": ["abacate", "avocado", "hass"],
+      "img": "/img/abacate_hass.jpg",
+      "id": 10
+    },
+    {
+      "name": "Bolacha Maria Cuétara",
+      "keywords": ["bolacha", "bolachas", "cookie", "cookies", "maria", "cuétara"],
+      "img": "/img/bolacha_maria_cuetara.jpg",
+      "id": 11
+    },
+    {
+      "name": "Bolacha Maria Choco Cuétara",
+      "keywords": ["bolacha", "bolachas", "cookie", "cookies", "maria", "choco", "cuétara"],
+      "img": "/img/bolacha_maria_choco_cuetara.jpg",
+      "id": 12
+    },
+    {
+      "name": "Sapateira",
+      "keywords": ["sapateira", "crab"],
+      "img": "/img/sapateira.jpg",
+      "id": 13
+    },
+    {
+      "name": "Sapateira Cozida",
+      "keywords": ["sapateira", "crab", "cozida"],
+      "img": "/img/sapateira_cozid.jpg",
+      "id": 14
+    },
+    {
+      "name": "Pão de Forma",
+      "keywords": ["pão", "bread", "forma"],
+      "img": "/img/pao_forma.png",
+      "id": 15
+    },
+    {
+      "name": "Pão de Forma Panrico",
+      "keywords": ["pão", "bread", "forma", "panrico"],
+      "img": "/img/pao_forma_panrico.jpg",
+      "id": 16
+    }
+  ],
+  "stores": [
+    {
+      "name": "Continente",
+      "img": "/img/continente.jpg",
+      "id": 1
+    },
+    {
+      "name": "Jumbo",
+      "img": "/img/jumbo.jpg",
+      "id": 2
+    },
+    {
+      "name": "Pingo Doce",
+      "img": "/img/pingo_doce.png",
+      "id": 3
+    },
+    {
+      "name": "Minipreço",
+      "img": "/img/minipreco.png",
+      "id": 4
+    }
+  ],
+  "stock": [
+    {
+      "product": 1,
+      "store": 1,
+      "price": 299,
+      "id": 1
+    },
+    {
+      "product": 1,
+      "store": 2,
+      "price": 399,
+      "id": 2
+    },
+    {
+      "product": 1,
+      "store": 3,
+      "price": 350,
+      "id": 3
+    },
+    {
+      "product": 1,
+      "store": 4,
+      "price": 324,
+      "id": 4
+    },
+    {
+      "product": 2,
+      "store": 1,
+      "price": 287,
+      "id": 5
+    },
+    {
+      "product": 2,
+      "store": 2,
+      "price": 293,
+      "id": 6
+    },
+    {
+      "product": 2,
+      "store": 3,
+      "price": 254,
+      "id": 7
+    },
+    {
+      "product": 3,
+      "store": 4,
+      "price": 298,
+      "id": 8
+    },
+    {
+      "product": 4,
+      "store": 2,
+      "price": 277,
+      "id": 9
+    },
+    {
+      "product": 4,
+      "store": 3,
+      "price": 266,
+      "id": 10
+    },
+    {
+      "product": 5,
+      "store": 1,
+      "price": 293,
+      "id": 11
+    },
+    {
+      "product": 6,
+      "store": 1,
+      "price": 319,
+      "id": 12
+    },
+    {
+      "product": 7,
+      "store": 3,
+      "price": 331,
+      "id": 13
+    },
+    {
+      "product": 8,
+      "store": 4,
+      "price": 309,
+      "id": 14
+    },
+    {
+      "product": 8,
+      "store": 3,
+      "price": 284,
+      "id": 15
+    },
+    {
+      "product": 9,
+      "store": 2,
+      "price": 192,
+      "id": 16
+    },
+    {
+      "product": 9,
+      "store": 2,
+      "price": 195,
+      "id": 16
+    },
+    {
+      "product": 10,
+      "store": 3,
+      "price": 178,
+      "id": 16
+    },
+    {
+      "product": 11,
+      "store": 4,
+      "price": 216,
+      "id": 17
+    },
+    {
+      "product": 12,
+      "store": 2,
+      "price": 272,
+      "id": 18
+    },
+    {
+      "product": 13,
+      "store": 1,
+      "price": 460,
+      "id": 19
+    },
+    {
+      "product": 13,
+      "store": 2,
+      "price": 473,
+      "id": 20
+    },
+    {
+      "product": 14,
+      "store": 1,
+      "price": 489,
+      "id": 21
+    },
+    {
+      "product": 14,
+      "store": 2,
+      "price": 509,
+      "id": 22
+    },
+    {
+      "product": 15,
+      "store": 3,
+      "price": 347,
+      "id": 23
+    },
+    {
+      "product": 16,
+      "store": 1,
+      "price": 361,
+      "id": 24
     }
   ]
 }

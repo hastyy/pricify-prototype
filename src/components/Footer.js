@@ -3,12 +3,11 @@ import { connect } from "react-redux";
 
 
 const Footer = (props) => {
-    if (!props.user)
-        return <noscript />;
+    //if (!props.user) return <noscript />;
 
     return (
         <footer>
-            Footer Component
+            Footer Component - Some static stuff in here
         </footer>
     );
 }
