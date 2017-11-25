@@ -7,6 +7,7 @@ import LandingPage from '../components/pages/LandingPage';
 import SearchPage from '../components/pages/SearchPage';
 import ResultsPage from '../components/pages/ResultsPage';
 import ProductPage from '../components/pages/ProductPage';
+import ShoppingListPage from '../components/pages/ShoppingListPage';
 import NotFoundPage from '../components/pages/NotFoundPage';
 
 
@@ -20,6 +21,7 @@ const AppRouter = () => (
                     <Route path="/search" component={SearchPage} />
                     <Route path="/results" component={ResultsPage} />
                     <Route path="/product/:id" component={ProductPage} />
+                    <Route path="/list" component={ShoppingListPage} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </main>

@@ -2,6 +2,11 @@ import axios from 'axios';
 
 import BASE_URL from '../config';
 
+import {
+    getUserShoppingLists,
+    createShoppingListOnRegister
+} from './shoppingLists';
+
 
 export const SET_USER = 'SET_USER';
 
@@ -53,6 +58,9 @@ export const login = (username, password, ...funcs) => {
                 // User found and password correct,
                 // dispatch action with user as payload to start a session.
                 dispatch(setUser(user));
+
+                // Get user's shopping lists
+                dispatch(getUserShoppingLists(user.id));
             })
             .catch(err => {
                 switch (err.type) {
@@ -110,6 +118,9 @@ export const register = (username, password, passwordConfirmation, ...funcs) => 
                 // User registered successfully,
                 // dispatch action with user as payload to start a session.
                 dispatch(setUser(user));
+
+                // Create user's first shopping list
+                dispatch(createShoppingListOnRegister(user.id));
             })
             .catch(err => {
                 switch (err.type) {

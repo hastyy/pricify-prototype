@@ -6,6 +6,7 @@ import searchTermReducer from '../reducers/searchTerm';
 import productsReducer from '../reducers/products';
 import storesReducer from '../reducers/stores';
 import stockReducer from '../reducers/stock';
+import shoppingListsReducer from '../reducers/shoppingLists';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -18,7 +19,8 @@ export default () => {
             searchTerm: searchTermReducer,
             products: productsReducer,
             stores: storesReducer,
-            stock: stockReducer
+            stock: stockReducer,
+            shoppingLists: shoppingListsReducer
         }),
         composeEnhancers(applyMiddleware(thunk))
     );

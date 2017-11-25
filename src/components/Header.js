@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import { setSearchTerm } from '../actions/searchTerm';
 
@@ -30,8 +31,10 @@ class Header extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-1">
-                        {this.props.location.pathname !== '/search' &&
-                            <img src="/img/logo.png" className="brand"/>}
+                            {this.props.location.pathname !== '/search' &&
+                            <Link to="/search">
+                                <img src="/img/logo.png" className="brand"/>
+                            </Link>}
                         </div>
                         <div className="col-md-10 d-flex align-items-center">
                             {this.props.location.pathname !== '/search' &&
@@ -54,7 +57,11 @@ class Header extends Component {
                                 </div>
                             </form>}
                         </div>
-                        <div className="col-md-1 d-flex align-items-center">Shopping List</div>
+                        <div className="col-md-1 d-flex align-items-center">
+                            <Link to="/list" className="btn btn-lg btn-outline-success">
+                                Shopping List
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </header>

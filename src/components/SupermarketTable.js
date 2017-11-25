@@ -2,13 +2,25 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { withRouter } from 'react-router';
 
+import { addProductToShoppingList } from '../actions/shoppingLists';
+
 import { getProductById } from '../selectors/products';
+import getActiveShoppingList from '../selectors/shoppingLists';
 
 
 class SupermarketTable extends Component {
-    onClick = () => {
-        // TODO dispatch add to list with this.props.product
-        console.log('Store selected! Adding to list...');
+    onClick = (store) => () => {
+        const product = {
+            ...this.props.product,
+            store
+        };
+
+        this.props.addProductToShoppingList(
+            this.props.activeShoppingList, 
+            product
+        );
+
+        this.props.history.push('/list');
     };
 
     render() {
@@ -26,7 +38,7 @@ class SupermarketTable extends Component {
                         <TableRow
                             key={s.id}
                             store={s}
-                            onClick={this.onClick}
+                            onClick={this.onClick(s)}
                         />
                     ))}
                 </tbody>
@@ -51,11 +63,14 @@ const getStores = (stores, stock, id) => {
 
 const mapStateToProps = (store, props) => ({
     product: getProductById(store.products, props.match.params.id),
-    stores: getStores(store.stores, store.stock, props.match.params.id)
+    stores: getStores(store.stores, store.stock, props.match.params.id),
+    activeShoppingList: getActiveShoppingList(store.shoppingLists)
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    //
+    addProductToShoppingList: (shoppingList, product) => {
+        dispatch(addProductToShoppingList(shoppingList, product));
+    }
 });
 
 

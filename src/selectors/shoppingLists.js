@@ -1,0 +1,1 @@
+export default (lists) => lists.find(l => l.active);
