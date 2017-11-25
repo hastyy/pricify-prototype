@@ -30,14 +30,12 @@ class SearchPage extends Component {
     };
 
     componentWillMount() {
+        if (!this.props.user)
+            this.props.history.push('/');
+            
         this.checkStorePropAndFetch('Products');
         this.checkStorePropAndFetch('Stores');
         this.checkStorePropAndFetch('Stock');
-    }
-
-    componentWillMount() {
-        if (!this.props.user)
-            this.props.history.push('/');
     }
 
     render() {

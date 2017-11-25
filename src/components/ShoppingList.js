@@ -68,15 +68,17 @@ class ShoppingList extends Component {
                     </tbody>
                 </table>
                 <div className="w-100 d-flex justify-content-between">
-                <button
-                    className="btn btn-secondary px-3 py-1"
-                    onClick={this.createShoppingList}
-                >
-                    Create New List
-                </button>
-                <Link to="/plan" className="btn btn-secondary px-3 py-1">
-                    Plan Route
-                </Link>
+                    <button
+                        className="btn btn-secondary px-3 py-1"
+                        onClick={this.createShoppingList}
+                    >
+                        Create New List
+                    </button>
+                    <Link to="/plan" 
+                        className={`btn btn-secondary px-3 py-1${this.props.activeShoppingList.products.length === 0 ? ' disabled' : ''}`}
+                    >
+                        Plan Route
+                    </Link>
                 </div>
             </div>
         );

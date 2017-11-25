@@ -193,52 +193,19 @@
       "date": 1511618777797,
       "products": [
         {
-          "name": "Abacate Hass",
-          "keywords": [
-            "abacate",
-            "avocado",
-            "hass"
-          ],
-          "img": "/img/abacate_hass.jpg",
-          "id": 10,
-          "store": {
-            "name": "Pingo Doce",
-            "img": "/img/pingo_doce.png",
-            "id": 3,
-            "price": 178
-          }
-        },
-        {
-          "name": "Leite Gresso Meio Gordo",
+          "name": "Leite Mimosa Meio Gordo",
           "keywords": [
             "leite",
             "milk",
-            "gresso"
+            "mimosa"
           ],
-          "img": "/img/leite_gresso.jpg",
-          "id": 3,
-          "store": {
-            "name": "Minipreço",
-            "img": "/img/minipreco.png",
-            "id": 4,
-            "price": 298
-          }
-        },
-        {
-          "name": "Cereais Nestlé Chocapic",
-          "keywords": [
-            "cereais",
-            "cereals",
-            "nestlé",
-            "chocapic"
-          ],
-          "img": "/img/cereais_chocapic.jpg",
-          "id": 5,
+          "img": "/img/leite_mimosa.jpg",
+          "id": 1,
           "store": {
             "name": "Continente",
             "img": "/img/continente.jpg",
             "id": 1,
-            "price": 293
+            "price": 299
           }
         }
       ],
