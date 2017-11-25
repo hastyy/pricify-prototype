@@ -21,7 +21,11 @@ class ResultsTable extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.props.products.map(p => (
+                    {this.props.products.sort((p1, p2) => {
+                        const price1 = this.props.bestPrices[p1.id];
+                        const price2 = this.props.bestPrices[p2.id];
+                        return price1 < price2 ? -1 : 1;
+                    }).map(p => (
                         <TableRow 
                             key={p.id}
                             product={p}
