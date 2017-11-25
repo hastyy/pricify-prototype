@@ -12,7 +12,7 @@ header .brand {
 }
 
 footer {
-    height: 10vh;
+    height: 5vh;
 }
 
 .page {
@@ -20,7 +20,7 @@ footer {
 }
 
 .page--session {
-    height: 75vh;
+    height: 80vh;
 }
 
 .inline-block {
@@ -63,4 +63,9 @@ tbody > .results-tr:hover {
 
 .icon-side {
     font-size: 140% !important;
+}
+
+.map-div {
+    background: url('/img/mapa.png') no-repeat;
+    background-size: 100%;
 }

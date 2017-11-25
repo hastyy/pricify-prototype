@@ -24,7 +24,7 @@ class Header extends Component {
     };
 
     render() {
-        //if (!this.props.user) return <noscript />;
+        if (!this.props.user) return <noscript />;
 
         return (
             <header>
@@ -58,9 +58,10 @@ class Header extends Component {
                             </form>}
                         </div>
                         <div className="col-md-1 d-flex align-items-center">
+                            {this.props.location.pathname !== '/list' &&
                             <Link to="/list" className="btn btn-lg btn-outline-success">
                                 Shopping List
-                            </Link>
+                            </Link>}
                         </div>
                     </div>
                 </div>

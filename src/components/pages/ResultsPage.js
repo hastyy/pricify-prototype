@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import ResultsTable from '../ResultsTable';
 
 
-export default class ResultsPage extends Component {
+class ResultsPage extends Component {
+    componentWillMount() {
+        if (!this.props.user)
+            this.props.history.push('/');
+    }
+
     render() {
         return (
             <div className="page--session container">
@@ -16,3 +22,10 @@ export default class ResultsPage extends Component {
         );
     }
 }
+
+const mapStateToProps = store => ({
+    user: store.user
+});
+
+
+export default connect(mapStateToProps)(ResultsPage);

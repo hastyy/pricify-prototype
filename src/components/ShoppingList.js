@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
     createShoppingList,
@@ -73,9 +74,9 @@ class ShoppingList extends Component {
                 >
                     Create New List
                 </button>
-                <button className="btn btn-secondary px-3 py-1">
+                <Link to="/plan" className="btn btn-secondary px-3 py-1">
                     Plan Route
-                </button>
+                </Link>
                 </div>
             </div>
         );

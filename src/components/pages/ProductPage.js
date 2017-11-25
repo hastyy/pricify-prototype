@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import SupermarketTable from '../SupermarketTable';
 
 
-export default class ProductPage extends Component {
+class ProductPage extends Component {
+    componentWillMount() {
+        if (!this.props.user)
+            this.props.history.push('/');
+    }
+
     render() {
         return (
             <div className="page--session container">
@@ -16,3 +22,10 @@ export default class ProductPage extends Component {
         );
     }
 }
+
+const mapStateToProps = store => ({
+    user: store.user
+});
+
+
+export default connect(mapStateToProps)(ProductPage);

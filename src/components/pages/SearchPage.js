@@ -35,6 +35,11 @@ class SearchPage extends Component {
         this.checkStorePropAndFetch('Stock');
     }
 
+    componentWillMount() {
+        if (!this.props.user)
+            this.props.history.push('/');
+    }
+
     render() {
         return (
             <div className="page--session container">
@@ -70,6 +75,7 @@ class SearchPage extends Component {
 }
 
 const mapStateToProps = (store) => ({
+    user: store.user,
     products: store.products,
     stores: store.stores,
     stock: store.stock

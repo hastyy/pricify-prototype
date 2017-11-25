@@ -7,7 +7,7 @@ const NotFoundPage = () => (
         <h1>[404] Oops!</h1>
         <p>
             We could not find what you were looking for...<br />
-            <Link to="/">Go back</Link>
+            <Link to="/search">Go back</Link>
         </p>
     </div>
 );

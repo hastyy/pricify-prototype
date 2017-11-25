@@ -8,6 +8,7 @@ import SearchPage from '../components/pages/SearchPage';
 import ResultsPage from '../components/pages/ResultsPage';
 import ProductPage from '../components/pages/ProductPage';
 import ShoppingListPage from '../components/pages/ShoppingListPage';
+import PlanPage from '../components/pages/PlanPage';
 import NotFoundPage from '../components/pages/NotFoundPage';
 
 
@@ -22,6 +23,7 @@ const AppRouter = () => (
                     <Route path="/results" component={ResultsPage} />
                     <Route path="/product/:id" component={ProductPage} />
                     <Route path="/list" component={ShoppingListPage} />
+                    <Route path="/plan" component={PlanPage} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </main>
